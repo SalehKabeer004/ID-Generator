@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>SMIT ID Generator</title>
+</head>
+
+<body>
+    <section class="main">
+        <nav>
+            GENERATE YOUR
+            <img class="logo" src="./SMIT.png" alt="">
+            ID CARD
+        </nav>
+        <section class="middle">
+            <div class="form">
+                <h2>Submit details to get your ID</h2>
+                <div class="form-details">
+                    <div>
+                        <label for="Name">Full Name</label>
+                        <br>
+                        <input type="text" id="inserted-name" name="name" placeholder="Saleh Kabeer" value="cvbhbjd" required>
+                    </div>
+                    <div>
+                        <label for="photo">Upload Your Picture</label>
+                        <br>
+                        <input type="file" id="inserted-photo">
+                    </div>
+                    <div>
+                        <label for="cnic">CNIC</label>
+                        <br>
+                        <input type="number" name="cnic" id="inserted-cnic" placeholder="42201 XXXX XXX X">
+                    </div>
+                    <div>
+                        <label for="Course">Course</label>
+                        <br>
+                        <select name="course" id="course-selctor">
+                            <option value="Digital Marketing">Digital Marketing</option>
+                            <option selected value="Modern Web App Development">Modern Web App Development</option>
+                            <option value="Graphic Designing">Graphic Designing</option>
+                        </select>
+                    </div>
+                    <button id="generate-id" onclick="generateIdCard()" >Generate ID</button>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Print your ID</h2>
+                <div class="card-print">
+                    <div class="front">
+                        <img src="./SMIT.png" id="front-logo" alt="">
+                        <h4>SAYLANI MASS IT TRAINING PROGRAM</h4>
+                        <img src="./avatar.png" id="profile-photo" alt="">
+                        <h3 id="printed-name" >MUHAMMAD SALEH KABEER</h3>
+                        <h5 id="printed-course">Modern Web Application Development</h5>
+                        <h3 id="printed-roll-no" >WMA-500239</h3>
+                    </div>
+                    <div class="back">
+                        <div><h5>Name: <span id="assigned-name" >MUHAMMAD SALEH</span> </h5></div>
+                        <div><h5>CNIC: <span id="assigned-cnic" >42201 XXXX XXX X</span> </h5></div>
+                        <div><h5>Course: <span id="assigned-course" >WMA BATCH 18</span> </h5></div>
+                        <img id="qrcode" src="./qrcode.png" alt="">
+                        <h5 id="Note">Note: This card is for SMIT premises only. If found please return to SMIT</h5>
+                        <div class="signature">
+                            <h6>Issuing authority</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+<script src="./app.js"></script>
+
+</html>
